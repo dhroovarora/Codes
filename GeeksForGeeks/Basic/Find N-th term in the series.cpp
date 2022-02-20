@@ -6,9 +6,13 @@ using namespace std;
 // User function Template for C++
 class Solution {
   public:
-    void speedBreaker(double a, int b){
+    long long int nthOfSeries(long long int n){
         // code here
-        cout<<fixed<<setprecision(b)<<a<<endl;
+        long long int a = 9;
+        for(int i=0;i<n-1;i++){
+            a = a + 24 + 16*i;
+        }
+        return a;
     }
 };
 
@@ -17,12 +21,10 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        double a;
-        cin >> a;
-        int b;
-        cin >> b;
+        long long int n;
+        cin >> n;
         Solution ob;
-        ob.speedBreaker(a,b);
+        cout << ob.nthOfSeries(n) << endl;
     }
     return 0;
 }
