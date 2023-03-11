@@ -1,5 +1,5 @@
 https://www.codechef.com/problems/LUCKFOUR
-
+https://www.codechef.com/problems/LUCKYFR
 
 
 
