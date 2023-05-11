@@ -1,9 +1,8 @@
-//Initial Template for C++
-#include <bits/stdc++.h>
-using namespace std;
+https://practice.geeksforgeeks.org/problems/rohans-love-for-matrix4723/0
 
- // } Driver Code Ends
-//User function Template for C++
+
+
+
 class Solution {
   public:
     int firstElement(int n) 
@@ -26,17 +25,3 @@ class Solution {
         return fib[1][0];
     }
 };
-
-// { Driver Code Starts.
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int  n;
-        cin >> n ;
-        Solution ob;
-        cout<<ob.firstElement(n)<<endl;
-    }
-    return 0;
-}
-  // } Driver Code Ends
