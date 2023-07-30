@@ -7,16 +7,16 @@ https://www.codechef.com/problems/DIVIDING
 using namespace std;
 
 int main() {
-	// your code goes here
-	int n;
-	cin >> n;
-	int k;
-	int sum = 0;
-	for(int i=0;i<n;i++){
-	    cin >> k;
-	    sum += k;
+	long n;
+	cin>>n;
+	long long int c, totalStamp=0 ;
+	for(long i=0; i<n; i++) {
+        cin>>c;
+	    totalStamp+=c;
 	}
-	(sum == n*(n+1)/2) ? cout << "YES" : cout << "NO";
-	cout << endl;
+	    
+	if(totalStamp == ((n*(n+1))/2)) cout<<"YES"<<endl;
+	else cout<<"NO"<<endl;
+	    
 	return 0;
 }
