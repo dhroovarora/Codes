@@ -6,25 +6,25 @@ https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/?envType=
 class Solution {
 public:
     int numberOfWays(string corridor) {
-        int seat = 0, res = 1, plant = 0;
+        // Store 1000000007 in a variable for convenience
+        const int MOD = 1e9 + 7;
 
-        for (char i : corridor) {
-            if (i == 'S')
-                seat += 1;
-            else
-                if (seat == 2)
-                    plant += 1;
+        // Initial values of three variables
+        int zero = 0;
+        int one = 0;
+        int two = 1;
 
-            if (seat == 3) {
-                res = (res * (plant + 1)) % (1000000007);
-                seat = 1;
-                plant = 0;
+        // Compute using derived equations
+        for (char thing : corridor) {
+            if (thing == 'S') {
+                zero = one;
+                swap(one, two);
+            } else {
+                two = (two + zero) % MOD;
             }
         }
 
-        if (seat != 2)
-            return 0;
-
-        return res;
+        // Return the result
+        return zero;
     }
 };
