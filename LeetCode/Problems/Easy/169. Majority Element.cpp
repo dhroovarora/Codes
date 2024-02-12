@@ -20,3 +20,17 @@ public:
         return a;
     }
 };
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int c=0;
+        int candidate;
+        for(int x:nums){
+            if (c==0)
+                candidate=x;
+            c+=(x==candidate)?1:-1;
+        }
+        return candidate;
+    }
+};
