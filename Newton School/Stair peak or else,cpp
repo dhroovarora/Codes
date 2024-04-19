@@ -1,0 +1,15 @@
+https://my.newtonschool.co/playground/code/0l97jcgby2xr
+
+
+
+
+#include <bits/stdc++.h> // header file includes every Standard library
+using namespace std;
+
+int main() {
+	// Your code here
+    int a,b,c;
+    cin >> a >> b >> c;
+    (a<b && b<c) ? cout << "Stair" : (b>a && b>c) ? cout << "Peak" : cout << "Nothing";
+    return 0;
+}
