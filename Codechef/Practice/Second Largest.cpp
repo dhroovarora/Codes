@@ -1,20 +1,21 @@
-https://www.codechef.com/problems/FLOW017
-
-
-
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
 	int t;
-	cin >> t;
+	cin>>t;
 	while(t--){
 	    int a,b,c;
-	    cin >> a >> b >> c;
-	    (a > b) ? (a > c) ? (b > c) ? cout << b : cout << c : cout << a : (b > c) ? (a > c) ? cout << a : cout << c : cout << b;
-	    cout << endl;
+	    cin>>a>>b>>c;
+	    if(a>b && a<c || a<b && a>c){
+	        cout<<a<<endl;
+	    }
+	    else if(b>a && b<c || b<a && b>c){
+	        cout<<b<<endl;
+	    }
+	    else{
+	        cout<<c<<endl;
+	    }
 	}
 	return 0;
 }
