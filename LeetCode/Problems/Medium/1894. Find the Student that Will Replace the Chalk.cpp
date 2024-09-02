@@ -1,0 +1,31 @@
+https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/description/?envType=daily-question&envId=2024-09-02
+
+
+
+
+class Solution {
+public:
+    int chalkReplacer(vector<int>& chalk, int initialChalkPieces) {
+        long long totalChalkNeeded = 0;
+        for (int studentChalkUse : chalk) {
+            totalChalkNeeded += studentChalkUse;
+        }
+        
+        int remainingChalk = initialChalkPieces % totalChalkNeeded;
+        
+        for (int studentIndex = 0; studentIndex < chalk.size(); studentIndex++) {
+            if (remainingChalk < chalk[studentIndex]) {
+                return studentIndex;
+            }
+            remainingChalk -= chalk[studentIndex];
+        }
+        
+        return 0;
+    }
+};
+static const int kds = []() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
